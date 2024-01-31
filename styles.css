@@ -23,6 +23,7 @@ ul
 {
     list-style: none;
 }
+
 a
 {
     text-decoration: none;
@@ -42,10 +43,10 @@ a
 
 /*HEADER*/
 
-body header div
+header
 {
     height:120px;
-    background-color:beige;
+
 }
 
 header h1 
@@ -60,12 +61,11 @@ header nav
     margin-top:50px
 }
 
-
-header nav ul li 
+header nav ul li
 {
-    display:inline-block;
-    margin-right: 10px;
-    float:left;
+    margin-right: 20px;
+    float:left
+
 
 }
 
