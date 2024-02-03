@@ -1,3 +1,4 @@
+
 /*GENERAL*/
 
 *
@@ -17,6 +18,25 @@ h1
     font-family: 'Crete Round',serif;
     font-size:45px;
     color:#444;
+}
+
+h2
+{
+    font-size: 55px;
+    color:#444
+}
+
+h4
+{
+    font-size: 24px;
+    color:#444;
+}
+
+
+p
+{
+    line-height: 20px;
+    color:#777
 }
 
 ul
@@ -65,13 +85,92 @@ header nav ul li
 {
     margin-right: 20px;
     float:left
-
-
 }
 
 header nav ul li a
 {
     text-transform:uppercase;
     font-weight: bold;
+}
+
+/* MAIN IMAGE */
+
+#main-image
+{
+    height: 580px;
+    background: url('html-css-images/main.jpg') center;
+}
+
+#main-image h2
+{
+    font-weight: normal;
+    text-transform:uppercase;
+    text-align:center;
+    padding:150px 0 40px 0;
+    margin-bottom:20px;
+
+    
+}
+.button-1
+{   
+    height:50px;
+    width:120px;
+    background-color:orange;
+    display:block;
+    color:#fff;
+    font-size:20px;
+    text-align: center;
+    margin: 0 auto;
+    line-height:50px;
+    border-radius:3px;
+}
+
+
+/* STEPS */
+
+
+#steps ul
+{
+    margin:80px 0;
+    text-align:center;
+ 
+}
+
+#steps ul li
+{
+    width:290px;  
+    display:inline-block;
+    padding-top:140px;
+    text-align:center;
+    margin-right:10px;  
+    margin-left:10px;   
+}
+
+#steps h4 
+{
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
+
+#steps p
+{
+    margin-bottom:20px;
+}
+
+#step-1
+{
+    background: url(html-css-images/steps-icon-1.png) no-repeat top center;
+}
+
+#step-2
+{
+    background: url(html-css-images/steps-icon-2.png) no-repeat top center;
+
+}
+
+#step-3
+{
+    background: url(html-css-images/steps-icon-3.png) no-repeat top center;
+    
 }
 
