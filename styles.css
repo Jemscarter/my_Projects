@@ -17,13 +17,13 @@ h1
 {
     font-family: 'Crete Round',serif;
     font-size:45px;
-    color:#444;
+    color:#363c9c;
 }
 
 h2
 {
     font-size: 55px;
-    color:#444
+    color:#2c2c86
 }
 
 h4
@@ -58,7 +58,7 @@ a
 
 .orange 
 {
-    color:orange;
+    color:rgba(255, 0, 0, 0.62);
 }
 
 /*HEADER*/
@@ -71,13 +71,13 @@ header
 
 header h1 
 {
-    float:left;
+    float:right;
     margin-top:32px
 }
 
 header nav 
 {
-    float:right;
+    float:left;
     margin-top:50px
 }
 
@@ -106,8 +106,9 @@ header nav ul li a
     font-weight: normal;
     text-transform:uppercase;
     text-align:center;
-    padding:150px 0 40px 0;
+    padding:15px 0 10px 0;
     margin-bottom:20px;
+    float:right;
 
     
 }
@@ -116,7 +117,7 @@ header nav ul li a
     height:50px;
     width:120px;
     background-color:orange;
-    display:block;
+    float:right;
     color:#fff;
     font-size:20px;
     text-align: center;
