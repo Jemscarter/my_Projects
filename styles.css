@@ -22,12 +22,10 @@ h1
     font-family:'Crete Round'
 }
 
-.wrapper
+.wrapper 
 {
     width:940px;
-    height:200px;
-    /* margin:0 auto; */
-    border:10px red solid
+    margin:0 auto;
 }
 
 .orange
@@ -35,20 +33,28 @@ h1
     color:#ff7a00
 }
 
+/* BORDERS */
+header
+{
+    border:1px red solid
+}
+header .wrapper 
+{
+    border:1px blue solid
+}
+
 /* HEADER */
 header
 {
     height:120px;
-    outline:1px solid;
 }
-
-header h1 
+header h1
 {
-    /* float:left; */
     margin-top:32px;
+    float:left
 }
-
 header nav
 {
-    float: right;
+    float:right;
 }
+
