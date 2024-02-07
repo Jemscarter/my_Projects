@@ -105,7 +105,7 @@ header ul li a
     padding:150px 0 40px;
 }
 
-.button-1   /* --> ON A AJOUTE UNE CLASSE POUR POUVOIR REUTILISER CE BOUTON */
+.button-1   /* --> on a rajoute une classe au lieu de main-image a */
 {
     text-transform:uppercase;
 }

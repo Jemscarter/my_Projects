@@ -19,9 +19,9 @@ a
 
 .wrapper 
 {
-    width:440px;
+    max-width:440px;
     margin:0 auto;
-    padding:0 10px; /* --> ON A AJOUTE UN PADDING POUR NE PAS QUE LE TEXTE SOIT COLLE*/
+    padding:0 10px; /* --> ON A AJOUTE UN PADDING POUR NE PAS QUE LE TEXTE OU LES BACKGROUND SOIT COLLE*/
 }
 
 p
@@ -53,7 +53,7 @@ header
 {
     outline:1px red solid
 }
-header .wrapper 
+.wrapper 
 {
     outline:1px blue solid
 }
@@ -62,4 +62,16 @@ h2
 {
     color:#444;
     font-size:55px;
+}
+
+a
+{
+    text-align:center;
+    background-color:orange;
+    padding:20px;
+    margin:0 auto;
+    display:block;
+    width:100px;
+    height:100px;
+    
 }
