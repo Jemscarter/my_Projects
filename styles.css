@@ -13,13 +13,15 @@ ul
 a
 {
     text-decoration:none;
+    color:#444;
+
 }
 
 .wrapper 
 {
     width:940px;
     margin:0 auto;
-    padding:0 10px;
+    padding:0 10px; /* --> ON A AJOUTE UN PADDING POUR NE PAS QUE LE TEXTE SOIT COLLE*/
 }
 
 .orange
@@ -33,8 +35,6 @@ h1
     color:#444;
     font-family:'Crete Round'
 }
-
-
 
 body
 {
@@ -50,6 +50,12 @@ header
 header .wrapper 
 {
     outline:1px blue solid
+}
+
+h2
+{
+    color:#444;
+    font-size:55px;
 }
 
 /* HEADER */
@@ -77,6 +83,30 @@ header ul li
 header ul li a 
 {
     text-transform:uppercase;
-    color:#444;
     font-weight:bold;
 }
+
+/* MAIN IMAGE */
+
+#main-image
+{
+    height:580px;
+    background: url('html-css-images/main.jpg') center 
+}
+
+
+#main-image h2
+{
+    font-weight:normal;
+    text-transform:uppercase;
+    text-align:center;
+    max-width:640px; /*Je lui attribue une largeur max, l'equivalent de br en css*/
+    margin:0 auto;
+    padding:150px 0 40px;
+}
+
+.button-1   /* --> ON A AJOUTE UNE CLASSE POUR POUVOIR REUTILISER CE BOUTON */
+{
+    text-transform:uppercase;
+}
+
