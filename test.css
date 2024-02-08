@@ -5,20 +5,9 @@
     padding:0;
 }
 
-ul
-{
-    list-style: none;
-}
-
-a
-{
-    text-decoration:none;
-    color:#444;
-
-}
-
 .wrapper 
 {
+    outline:1px blue solid;
     max-width:440px;
     margin:0 auto;
     padding:0 10px; /* --> ON A AJOUTE UN PADDING POUR NE PAS QUE LE TEXTE OU LES BACKGROUND SOIT COLLE*/
@@ -27,20 +16,9 @@ a
 p
 {
     text-align:center;
-    padding:150px 0 40px;
+    padding:50px 0 40px;
 }
 
-.orange
-{
-    color:#ff7a00
-}
-
-h1
-{
-    font-size:45px;
-    color:#444;
-    font-family:'Crete Round'
-}
 
 body
 {
@@ -48,30 +26,15 @@ body
     font-family: Arial, sans-serif;
 }
 
-/* BORDERS */
-header
-{
-    outline:1px red solid
-}
-.wrapper 
-{
-    outline:1px blue solid
-}
-
-h2
-{
-    color:#444;
-    font-size:55px;
-}
 
 a
 {
     text-align:center;
     background-color:orange;
-    padding:20px;
     margin:0 auto;
     display:block;
     width:100px;
     height:100px;
-    
+    text-decoration:none;
+    color:#444;
 }
