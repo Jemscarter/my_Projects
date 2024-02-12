@@ -5,36 +5,11 @@
     padding:0;
 }
 
-.wrapper 
+fieldset
 {
-    outline:1px blue solid;
-    max-width:440px;
-    margin:0 auto;
-    padding:0 10px; /* --> ON A AJOUTE UN PADDING POUR NE PAS QUE LE TEXTE OU LES BACKGROUND SOIT COLLE*/
-}
-
-p
-{
+    padding-top:30px;
     text-align:center;
-    padding:50px 0 40px;
-}
-
-
-body
-{
-    font-size : 30px;
-    font-family: Arial, sans-serif;
-}
-
-
-a
-{
-    text-align:center;
-    background-color:orange;
-    margin:0 auto;
-    display:block;
-    width:100px;
-    height:100px;
-    text-decoration:none;
-    color:#444;
+    width:300px;
+    height:500px;
+    margin:100px auto 0;
 }
