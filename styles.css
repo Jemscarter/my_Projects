@@ -204,14 +204,14 @@ header ul li a
 
 #possibilities article:first-child
 {
-    background: url(/html-css-images/article-image-1.jpg) center;
+    background: url(/Practice-Project/html-css-images/article-image-1.jpg) center;
     margin-right: 20px;
 
 }
 
 #possibilities article
 {
-    background: url(/html-css-images/article-image-2.jpg) center;
+    background: url(/Practice-Project/html-css-images/article-image-2.jpg) center;
     height:270px;
     width:460px;
     float:left;
@@ -227,6 +227,7 @@ header ul li a
     border-radius:10px 0 0 10px;
     padding:20px;
     text-align: center;
+    
 }
 
 article h4
