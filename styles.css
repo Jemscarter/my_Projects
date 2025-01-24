@@ -96,8 +96,13 @@ header ul li
 {
     margin-right:20px;
     float:left;
+<<<<<<< HEAD
     text-decoration: none;
     list-style-type: none;
+=======
+    text-decoration: 1px underline overline #ff7a00;
+    list-style-type:"• ";
+>>>>>>> 7a60f7a790ed03321a1b302e973f606c4fe107fc
 }
 
 header ul li a 
@@ -204,14 +209,22 @@ header ul li a
 
 #possibilities article:first-child
 {
+<<<<<<< HEAD
     background: url(html-css-images/article-image-1.jpg) center;
+=======
+    background: url(/Practice-Project/html-css-images/article-image-1.jpg) center;
+>>>>>>> 7a60f7a790ed03321a1b302e973f606c4fe107fc
     margin-right: 20px;
 
 }
 
 #possibilities article
 {
+<<<<<<< HEAD
     background: url(html-css-images/article-image-2.jpg) center;
+=======
+    background: url(/Practice-Project/html-css-images/article-image-2.jpg) center;
+>>>>>>> 7a60f7a790ed03321a1b302e973f606c4fe107fc
     height:270px;
     width:460px;
     float:left;
