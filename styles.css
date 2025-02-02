@@ -238,7 +238,7 @@ header nav a:hover {     /* הובר לטקסט ולפאדינג */
     background-size: 4.1rem;
     background-color: #f8f0e3a4;
     background-blend-mode: overlay;
-    border: 3px var(--color-8) solid;
+    border: 1px var(--color-1) solid;
     border-radius: 5px;
     padding: 1rem 0.8rem;
 }
