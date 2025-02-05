@@ -13,7 +13,7 @@
     <meta name="keywords"
         content="cyberbullying, online violence, digital harassment, internet psychology, online behavior">
     <!-- עורכים (היות והדף מבוסס על שיעור של טלי גזית, הזכרתי אותה) -->
-    <meta name="author" content="Jeremy Garcini,Tali Gazit">
+    <meta name="author" content="Jeremy Garcini">
     <!-- כותרת האתר-->
     <title>Jeremy's Project - Main Page</title>
 
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <header lang="en" id="Header">
+    <header lang="en" id="Header"> <!--ID for the link purpose only-->
         <h1><span>T</span>he <span>D</span>igital <span>H</span>omo <span>S</span>apiens</h1>
         <nav>
             <ul>
@@ -39,21 +39,64 @@
         </nav>
     </header>
     <main>
-        <!-- My main contains a <section> encompassing 3 <articles> :
+        <!-- My main contains an <article> encompassing 4 <section> :
 
-        1- An article with a description about violence and a table. 
-        2- An article with a blockquote, and an embedded audio (the quote provided originates from the Podcast).
+        1- A section with a description about violence . 
+        2- A section with a blockquote, and an embedded audio (the quote provided originates from the Podcast).
         3- A hebrew image with an english description of the image.
+        4- And a section with a table
         
         -->
-        <section class="Main-Section-1">
-            <article id="Online-Attack-Article">
+        <article class="Main-Article-1">
+            <section id="Online-Attack-Section">
                 <h2>Online Attack</h2>
                 <p>This course dispensed by <cite>Tali Gazit</cite> from <cite>Bar Ilan University</cite> explores
                     internet psychology focusing on a disturbing phenomenon: online attacks. We examine various forms of
                     violence manifesting online, their causes and consequences, while trying to find ways to address
                     this problem.</p>
                 <hr>
+            </section>
+            <section>
+                <h2 class=Underlined>An Image about online Violence</h2> 
+                <div id="Violence-Image-Section"> <!--I was compelled to use a 2nd external div because the header was wrapped inside the violence-image-styling-->
+                    <div><!--I needed a wrapper for my white bg over the url(svg) -->
+                        <img lang="he" src="violence-online.jpg"
+                            alt="תמונה ממצגת שמראה אישה עם מסכה מאחורי המחשב שלה. מלל שבתמונה : מה הם הגורמים המסייעים לאלימות באינטרנט ? -> התוקפן מרגיש מוגן באינטרנט, ברוב המקרים הקורבן איננו יכול להשיב כלל לתוקפן, והיעדר אכיפה">
+                        <h2> <mark> <u>Image :</u> <q>Factors Contributing to Online Violence</q></mark> </h2>
+                        <p>The image shows a woman wearing a mask behind her computer, with Hebrew text asking: <q>What
+                                factors enable online violence?</q> </p>
+                        <p><mark>The answer highlights three key points:</mark></p>
+                        <ol>
+                            <li><q>The attacker feels protected online</q></li>
+                            <li><q>In most cases, the victim cannot respond to the attacker</q></li>
+                            <li><q>Lack of enforcement</q></li>
+                        </ol>
+                        <p>These factors create what psychologists call the <q>online disinhibition effect</q> - where
+                            anonymity and physical distance make people more likely to engage in hostile behavior.</p>
+                        <p>For example, a person who would never insult someone face-to-face might leave cruel comments on
+                            social media, or someone might share private information knowing they're unlikely to face
+                            consequences.</p>
+                    </div>
+                </div>
+                <hr>    
+            </section>
+            <section  id="Blockquote-Section"> <!--ID Not used in stylesheet nor in the footer, only for semantic purpose and code clarity-->
+                <h2 class="Underlined">But what if we thought for a bit...</h2>
+                <blockquote class="Blockquote-1">
+                    <h3>Thought-Provoking Questions:</h3>
+                    <ul>
+                        <li>"Who is more aggressive online: men or women?"</li>
+                        <li>"Is it right to censor violent content? Where do we draw the lines?"</li>
+                        <li>"Does the internet make people bad?"</li>
+                        <li>"How can we deal with cyberbullying?"</li>
+                    </ul>
+                    <audio controls src="violence-online-podcast.mp3" lang="en" id="Thought-Provoking-Audio"
+                        alt="Podcast about violence based on Dr. Tali Gazit's presentations"></audio>
+                </blockquote>
+                <hr>
+            </section>
+            <section id="Table-Section">
+                <h2 class="Underlined">Table illustrating the different types of online attacks and their target groups :</h2>
                 <table class="Table-1"> <!-- Table class as a template. -pratical for potential reusage.-->
                     <caption>Types of Online Attacks</caption>
                     <thead>
@@ -122,51 +165,17 @@
                         </tr>
                     </tbody>
                 </table>
-            </article>
-            <article> <!--Adding an article here prevented margin-collapse on the blockquote-->
-                <blockquote class="Blockquote-1">
-                    <h3>Thought-Provoking Questions:</h3>
-                    <ul>
-                        <li>"Who is more aggressive online: men or women?"</li>
-                        <li>"Is it right to censor violent content? Where do we draw the lines?"</li>
-                        <li>"Does the internet make people bad?"</li>
-                        <li>"How can we deal with cyberbullying?"</li>
-                    </ul>
-                    <audio controls src="violence-online-podcast.mp3" lang="en" id="Thought-Provoking-Audio"
-                        alt="Podcast about violence based on Dr. Tali Gazit's presentations"></audio>
-                </blockquote>
-            </article>
-            <article id="Violence-Image-Article">
-                <div><!--I needed a wrapper for my white bg over the url(svg) -->
-                    <img lang="he" src="violence-online.jpg"
-                        alt="תמונה ממצגת שמראה אישה עם מסכה מאחורי המחשב שלה. מלל שבתמונה : מה הם הגורמים המסייעים לאלימות באינטרנט ? -> התוקפן מרגיש מוגן באינטרנט, ברוב המקרים הקורבן איננו יכול להשיב כלל לתוקפן, והיעדר אכיפה">
-                    <h2> <mark> <u>Image :</u> <q>Factors Contributing to Online Violence</q></mark> </h2>
-                    <p>The image shows a woman wearing a mask behind her computer, with Hebrew text asking: <q>What
-                            factors enable online violence?</q> </p>
-                    <p><mark>The answer highlights three key points:</mark></p>
-                    <ol>
-                        <li><q>The attacker feels protected online</q></li>
-                        <li><q>In most cases, the victim cannot respond to the attacker</q></li>
-                        <li><q>Lack of enforcement</q></li>
-                    </ol>
-                    <p>These factors create what psychologists call the <q>online disinhibition effect</q> - where
-                        anonymity and physical distance make people more likely to engage in hostile behavior.</p>
-                    <p>For example, a person who would never insult someone face-to-face might leave cruel comments on
-                        social media, or someone might share private information knowing they're unlikely to face
-                        consequences.</p>
-                </div>
-            </article>
-        </section>
+            </section>
+        </article>
     </main>
     <footer>
         <!--Will be used throughout all my pages and is unique, hence why I won't give him classes or IDs, using direct "footer" selector is aceptable in this case-->
         <nav>
             <ul>
                 <li><a href="#Header">Back to Top</a></li>
-                <li><a href="#Online-Attack-Article">Back to Section 1</a></li>
+                <li><a href="#Online-Attack-Section">Back to Section 1</a></li>
             </ul>
         </nav>
     </footer>
+    </html>
 </body>
-
-</html>
