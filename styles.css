@@ -234,7 +234,7 @@ header nav a:hover {
     border: 2.5px solid #8EBFE6;
     border-radius: 3px;
     display: block;
-    width: 68%;
+    width: 80%;
     /*מאפשר לתמונה שלי לא לצוף מהקונטיינר ולהישאר באותו גודל גם על מסך קטן*/
     margin: 1rem auto 2rem;
 }
