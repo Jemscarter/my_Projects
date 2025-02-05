@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Main Language is ENGLISH (except for a single <img> that is in hebrew)  -->
+<html lang="he"> <!-- שפה ראשית עברית -->
 
 <head>
     <!-- טגי ״מטה״ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="The Digital Homo Sapiens - Online Violence Study">
+    <meta name="title" content="The Digital Homo Sapiens - Contact Us">
     <!-- תיאור-->
-    <meta name="description"
-        content="An in-depth study of online violence, cyberbullying, and digital harassment patterns in modern society.מחקר מעמיק על אלימות מקוונת, בריונות רשת ודפוסי הטרדה דיגיטלית בחברה המודרנית.">
+    <meta name="description" content="עמוד צור קשר של אתר 'האדם הדיגיטלי'. צרו קשר עם ג׳רמי גרסיני.">
     <!-- מילות מפתח-->
-    <meta name="keywords"
-        content="cyberbullying, online violence, digital harassment, internet psychology, online behavior">
-    <!-- עורכים (היות והדף מבוסס על שיעור של טלי גזית, הזכרתי אותה) -->
-    <meta name="author" content="Jeremy Garcini,Tali Gazit">
+    <meta name="keywords" content="צור קשר, שאלות, פידבק, ג׳רמי גרסיני, האדם הדיגיטלי">
+    <!-- עורכים -->
+    <meta name="author" content="Jeremy Garcini">
     <!-- כותרת האתר-->
-    <title>Jeremy's Project - Main Page</title>
+    <title>Jeremy's Project - Contact Page</title>
 
     <!-- קישור לדף עיצוב -->
     <link rel="stylesheet" href="styles.css">
@@ -28,27 +26,78 @@
 </head>
 
 <body>
-    <header lang="en" id="Header">
-        <h1><span>T</span>he <span>D</span>igital <span>H</span>omo <span>S</span>apiens</h1>
+    <header lang="he" id="Header"> <!--מזהה לצורך קישור בלבד-->
+        <h1><span>צ</span>ור <span>א</span>יתנו <span>ק</span>שר</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="Main-Section-1">
-            COMING SOON !
-        </section>
+    <main dir="rtl">  <!--כדי לשמור על הרספןנסיביוט הגדרתי את זה רק במיין למ רות שמן הראוי היה לעשות זאת בתג היש טי אמ אל אך כיון שאין כמעט הבדל סמנטי הקלתי בדבר-->
+        <article class="Main-Article-1">
+            <section id="Contact-Section-1"> <!--לצורך הקישור-->
+                <h2 class="Underlined">צרו קשר</h2>
+                <p>יש לכם שאלות, הצעות או סתם רוצים להגיד שלום? אתם מוזמנים למלא את הטופס למטה ואני אשתדל לחזור
+                    אליכם בהקדם.</p>
+
+                <form class="Contact-Form"> <!--השתמשתי יותר בקלאסים כדי שהטופס יהיה ניתן לשימוש חוזר-->
+                    <fieldset>
+                        <legend class="Form-Legend">פרטים אישיים</legend>
+                            <label for="name">שם מלא:</label>
+                            <input type="text" id="name" name="user_name" required>
+                            <label for="email">דוא"ל:</label>
+                            <input type="email" id="email" name="user_email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="Form-Legend">נושא הפנייה ותוכן</legend>
+                        <label for="subject">נושא:</label>
+                        <select id="subject" name="subject">
+                            <option value="">-- בחרו נושא --</option>
+                            <option value="question">שאלה</option>
+                            <option value="suggestion">הצעה</option>
+                            <option value="feedback">משוב</option>
+                            <option value="other">אחר</option>
+                        </select>
+                            <label for="message">הודעה:</label>
+                            <textarea id="message" name="user_message" rows="5" required></textarea>
+                    </fieldset>
+
+
+                    <fieldset> 
+                        <legend class="Form-Legend">איך שמעת עלינו?</legend>
+                            <label class="Choices-Labels">מקור הגעה:</label>
+                            <input type="radio" id="source-google" name="source" value="google">
+                            <label class="Choices-Labels" for="source-google">גוגל</label>
+                            <input type="radio" id="source-facebook" name="source" value="facebook">
+                            <label class="Choices-Labels" for="source-facebook">פייסבוק</label>
+                            <input type="radio" id="source-friend" name="source" value="friend">
+                            <label class="Choices-Labels" for="source-friend">חבר</label>
+                            <input type="radio" id="source-other" name="source" value="other">
+                            <label class="Choices-Labels" for="source-other">אחר</label>
+                    </fieldset>
+
+                    <fieldset class="Form-Row">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                        <label class="Choices-Labels" for="newsletter">אני רוצה להירשם לניוזלטר</label>
+                    </fieldset>
+                    <button type="submit" formaction="mailto:jeremy.garcini@gmail.com">שלח</button>
+                    <button type="reset">נקה</button>
+
+
+                </form>
+            </section>
+        </article>
     </main>
     <footer>
         <!--Will be used throughout all my pages and is unique, hence why I won't give him classes or IDs, using direct "footer" selector is aceptable in this case-->
         <nav>
             <ul>
-                <li><a href="#Header">Back to Top</a></li>
-                <li><a href="#Online-Attack-Article">Back to Section 1</a></li>
+                <li><a href="#Header">חזרה לראש הדף</a></li>
+                <li><a href="#Contact-Section-1">חזרה לתוכן דף צור קשר</a></li>
             </ul>
         </nav>
     </footer>
