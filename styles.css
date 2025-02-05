@@ -1,5 +1,4 @@
-
-    /** ALL PAGES - GENERAL **/
+/* ALL PAGES - GENERAL */
 html {
     font-size: 16px;
     font-family: var(--font-2);
@@ -33,9 +32,27 @@ p {
     font-family: var(--font-2);
 }
 
-p > q, p > cite {
-    color: var(--color-8); /*כל ה״קיו״ וה״סייט״ שנמצאים ישירות בתוך ״פרגף״, יהיו בצבע כחול*/
+p>q,
+p>cite {
+    color: var(--color-8);
+    /*כל ה״קיו״ וה״סייט״ שנמצאים ישירות בתוך ״פרגף״, יהיו בצבע כחול*/
     font-weight: bold;
+}
+
+cite a {
+    color: inherit; /*משמש כחוק כללי שכל קישור בתוך סייט יוריש את הצבע (משתנה 8) והפונט וייט בולד שהוגדרו.*/
+}
+
+
+dt {
+    font-weight: bold;
+    color: var(--color-8);
+    margin-top: 0.5rem; /* ריווח בין הגדרות */
+}
+
+dd {
+    color: var(--color-10);
+    font-style: italic;
 }
 
 :root {
@@ -47,47 +64,83 @@ p > q, p > cite {
     --font-5: 'Abril Fatface', serif;
     --font-6: 'Yeseva One', serif;
     /* COLOR PALETTE */
-    --color-1: #F8F9FA; /* Header + Footer bg-color*/
-    --color-2: #E9ECEF; /*.Table-1 color*/
-    --color-3: #F8F0E3; /* Main-ection-1 color*/
+    --color-1: #F8F9FA;
+    /* Header + Footer bg-color*/
+    --color-2: #E9ECEF;
+    /*.Table-1 color*/
+    --color-3: #F8F0E3;
+    /* Main-Article-1 color*/
     --color-4: #D3E3FC;
     --color-5: #e25055;
-    --color-6: #E5989B; /*.Table-1 + img border color*/
-    --color-7: #591F0B;/* Img article list*/
+    --color-6: #E5989B;
+    /*.Table-1 + img border color*/
+    --color-7: #591F0B;
+    /* Img Section list*/
     --color-8: #006D77;
-    --color-9: #D3E3FC79; /* Color 4 - opacity*/
+    --color-9: #D3E3FC79;
+    /* Color 4 + opacity*/
     --color-10: #144552;
-    --color-11: #E5989B84;/* Color 5 - opacity*/
-
+    --color-11: #E5989B84;
+    /* Color 5 + opacity*/
+    --color-12: #FF3C3C76;
+    /* nav button border color */
+    --color-13: #FAEBD7;
+    /* Light Beige - Form Background */
+    --color-14: #DEEBF7;
+    /* Light Blue - Fieldset/Section Background */
+    --color-15: #FFFFFF;
+    /* White - Input Background */
 }
 
-    /** ALL PAGES' HEADER **/
+.Underlined {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-7);
+    text-shadow: 3px 1px 1px var(--color-2);
+    color: var(--color-5);
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin: 1.5rem 0;
+    /*בפועל יהיה רק 0.5 בכלל מארג׳ין קולפס*/
+}
+
+/** ALL PAGES' HEADER **/
 header {
     background-color: var(--color-1);
     position: relative;
-    padding: 0.3rem;
+    padding: 0.5rem;
+    margin: auto;
 }
 
 header h1 span {
-    color: var(--color-6);    /*צבע שונה לאות ראשון של כל מילה*/
+    color: var(--color-6);
+    /*צבע שונה לאות ראשון של כל מילה*/
     text-shadow: -1px 1px var(--color-7);
 }
 
 header nav {
     position: absolute;
-    top: 0.4rem;
-    right: 0.3rem;
+    /*פוזישיון אבסולוט כדי ש״יצוף״ לצד ימין*/
+    right: 0.7rem;
+    top: 0.3rem !important;
+    padding: 0.5rem 0;
 }
 
 header nav ul li {
-    background-color: var(--color-8);    /* צבע רקע לכפתורי הניווט */
+    background-color: var(--color-8);
+    /* צבע רקע לכפתורי הניווט */
     list-style: none;
     display: inline-block;
-    margin: 0 0.4rem;    /* רווח בין כפתורי הניווט */
+    margin: 0 0.1rem;
+    /*ימין ושמאל בלבד*/
+    /* רווח בין כפתורי הניווט */
     border-radius: 14px;
+    border: 1px solid var(--color-12);
+
 }
 
-header nav ul li:hover {         /* הובר לצבע רקע של הכפתורים + גבולות */
+header nav ul li:hover {
+    /* הובר לצבע רקע של הכפתורים + גבולות */
     background-color: var(--color-10);
     transition: 0.5s;
     border: 2px solid var(--color-8);
@@ -95,97 +148,186 @@ header nav ul li:hover {         /* הובר לצבע רקע של הכפתורי
 
 header nav a {
     text-decoration: none;
-    padding: 0.4rem 1rem;     /* פאדינג לכפתור */
+    padding: 0.4rem 0.8rem;
+    /* פאדינג לכפתור */
     display: inline-block;
     color: var(--color-4);
-    font-family: var(--font-6)     /* צבע טקסט לכפתור */
+    font-family: var(--font-6);
+    font-size: 0.8rem;
+    /* צבע טקסט לכפתור */
 }
 
-header nav a:hover {     /* הובר לטקסט ולפאדינג */
+header nav a:hover {
+    /* הובר לטקסט ולפאדינג */
     color: var(--color-1);
     padding: 0.4rem 1.5rem;
     transition: 0.5s;
 }
 
 
-    /* MAIN-SECTION-1 CLASS (USED IN: INDEX)*/
-.Main-Section-1 {
+/* MAIN-ARTICLE-1 CLASS (USED IN: INDEX, ABOUT, CONTACT)*/
+/*דיסקליימר - השתמשתי בקלאסים רק כששקלתי לנכון שהדבר יהיה ניתן לשימוש חוזר בקלות. מה שלא שפטתי כסביר לשימוש חוזר הגדרתי את מאפייני הסטייל שלו רק עם #איידי*/
+.Main-Article-1 {
     background-color: var(--color-3);
     padding: 1.2rem;
+    /*רק מוסיף פאדינג וצבע רקע כך שמאפשר בקלות להשתמש בו שוב*/
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
-    /* ONLINE ATTACK ARTICLE (INDEX's 1st ARTICLE)*/
-#Online-Attack-Article {
-    margin:0 auto;
-    width:90%;
+.Main-Article-1 section:not(:first-of-type):not(:last-of-type) {
+    max-width: 726px;
+    margin: 0 auto;
+    padding: 0 0.2rem;
+    /*פאדינג בצדדים שיראה יפה ולא דחוס*/
 }
 
-#Online-Attack-Article p {
-    padding:0.3rem 0 1.3rem;
+.Main-Article-1 section:first-of-type,
+.Main-Article-1 section:last-of-type {
+    padding: 0 0.2rem;
+    margin: 0 auto;
 }
 
-#Online-Attack-Article h2 {
-    padding:1rem 0 0 0.5rem; /*משמאל ומלמעלה*/
+/* INDEX PAGE ONLINE ATTACK SECTION */
+#Online-Attack-Section {
+    margin: 0 auto 1rem;
+    /*ממרכז את האלמנט משמאל ומימין*/
+}
+
+#Online-Attack-Section p {
+    padding: 0.3rem 0 0.9rem;
+}
+
+#Online-Attack-Section p:not(:first-of-type) {
+    /*אני אוהב את הסלקטורים האלה !!!*/
+    text-indent: 1.3rem;
+    /*במקרה ויהיו עוד פסקאות*/
+}
+
+#Online-Attack-Section p:not(:first-of-type)::before {
+    content: "👉 ";
+    /*במקרה ויהיו עוד פסקאות*/
+}
+
+#Online-Attack-Section p:last-of-type {
+    padding-bottom: 1.3rem;
+    /*במקרה ויהיו עוד פסקאות, הרווח האחרון יהיה מפריד מהטבלה*/
+}
+
+#Online-Attack-Section h2 {
+    padding: 1rem 0 0 0.5rem;
+    /*משמאל ומלמעלה*/
     color: var(--color-5);
     text-transform: uppercase;
     font-family: var(--font-5);
 }
 
-#Online-Attack-Article h2::before {
+#Online-Attack-Section h2::before {
     content: url(violence-online.svg) "  ";
+    /*אייקון חינמי*/
 }
 
-    /* TABLE-1 CLASS (USED IN: INDEX)*/
-.Table-1 {
-    border-collapse: collapse; /*לתקן את הגבולות המכוערות של ברירת מחדל*/
-    border: 2px solid var(--color-8);    /* גבולות עביים סביבות הטבלה */
-    width: 90%;
-    margin: 2rem auto;
+/* INDEX-PAGE VIOLENCE IMAGE SECTION */
+/*נ״ב : רק מי שיבין בתכנות יוכל להעריך את המימוש ידיעה שהיה כאן*/
+#Violence-Image-Section img {
+    outline: 2.5px solid var(--color-9);
+    border: 2.5px solid #8EBFE6;
+    border-radius: 3px;
     display: block;
-    overflow-x: auto;
+    width: 90%;
+    /*מאפשר לתמונה שלי לא לצוף מהקונטיינר ולהישאר באותו גודל גם על מסך קטן*/
+    margin: 1rem auto 2rem;
 }
 
-.Table-1 caption {
-    font-style: italic;
-    font-family: var(--font-3);
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-    font-size: 1.3rem ;
-    border-top: 1px solid var(--color-8);
-    border-left: 1px solid var(--color-8);
-    border-right: 1px solid var(--color-8);
-    background-color: var(--color-6);
-}
-
-.Table-1 td {
-    border: 1px solid var(--color-8);    /* גבולות דקים בתוך התאים */
-    padding: 0.5rem;
-}
-
-.Table-1 th {
-    color: var(--color-10);
-    border: 2px solid var(--color-8);    /* גבולות עביים בין הכותרות */
-    padding: 0.2rem 0;
-}
-
-.Table-1 tbody tr:nth-child(odd) {
-    background-color: var(--color-2);
-}
-
-.Table-1 tr td:first-child {
+#Violence-Image-Section {
+    margin: 1rem auto;
+    /*ממרכז את האלמנט משמאל ומימין*/
     text-align: center;
-    font-weight: bold;
+    /*ממרכז את תוכן האלמנט*/
+    background: url(violence-online.svg) center;
+    background-size: 4.1rem;
+    background-color: #f8f0e3a4;
+    background-blend-mode: overlay;
+    border: 1px var(--color-1) solid;
+    border-radius: 5px;
+    padding: 1rem 0.8rem;
 }
 
-    /* BLOCKQUOTE-1 CLASS (USED IN: INDEX) */
+#Violence-Image-Section>div {
+    background-color: #ffffffbb;
+    padding: 0.4rem;
+    border: 1px var(--color-8) solid;
+    border-radius: 5px;
+}
+
+#Violence-Image-Section::before {
+    background: rgba(255, 0, 0, 0.5)
+}
+
+#Violence-Image-Section h2 {
+    color: var(--color-10);
+    /* עיין הערה על הטג ״מארק״*/
+    text-decoration-color: #006D77;
+    /*ולא גיליתי שזה רק צובע קו תחתון קיים בתג ״יו״ ולא מייצר קו חדש */
+}
+
+#Violence-Image-Section p {
+    margin: 0.6rem 0;
+    /*מפריד את הקטעים ברווח ביניהם ובין הכותרת ובין הרשימה*/
+}
+
+#Violence-Image-Section p::before {
+    content: "👉 ";
+}
+
+#Violence-Image-Section ol {
+    width: fit-content;
+    margin: 0 auto;
+    /*ממרכז את האלמנט משמאל ומימין*/
+}
+
+#Violence-Image-Section li {
+    list-style-position: inside;
+    color: var(--color-7);
+    font-weight: 200;
+    font-family: var(--font-4);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    background-color: var(--color-9);
+    text-align: left;
+    list-style-type: lower-roman;
+    padding-left: 1rem;
+    width: 92%;
+    margin: 0 auto;
+}
+
+
+#Violence-Image-Section mark {
+    background-color: var(--color-11);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 0.2rem;
+    font-weight: bold;
+    color: inherit;
+    /*כשניסיתי לצבוע את הכותרת גיליתי ש״מארק״ לא יורש צבע במחדל לכן אימצתי את הפטנט הנ״ל*/
+}
+
+
+/* BLOCKQUOTE-1 CLASS (USED IN: INDEX) */
 .Blockquote-1 {
-    background-color:var(--color-9);
+    background-color: var(--color-9);
     border-radius: 10px;
     text-align: justify;
     padding: 0.6em 2rem;
-    margin: 2rem auto 1rem; /*מיישר אותו באמצע האבא*/
+    margin: 1.5rem auto;
+    /*מיישר אותו בתוך הקונטיינר ומוסיף רווח לפניו ואחריוגם לשימושים פוטנציאליים של אותו קלאס בעתיד*/
     display: block;
-    width:80%;
+    width: 80%;
+    /*80 אחוז מהקונטיינר שלו*/
+    border: 3px solid var(--color-6);
+    box-sizing: border-box;
+    /*לא היה עובד על מסכים מאוד קטנים וכעט סידרתי את זה*/
 }
 
 .Blockquote-1 h3 {
@@ -203,110 +345,80 @@ header nav a:hover {     /* הובר לטקסט ולפאדינג */
 }
 
 .Blockquote-1 li:nth-child(odd) {
-    color: var(--color-10);    /*צבע כהה לכל האיברים האי זוגיים*/
+    color: var(--color-10);
+    /*צבע כהה לכל האיברים האי זוגיים*/
 }
 
 .Blockquote-1 li:nth-child(even) {
-    color: var(--color-8);    /*צבע בהיר לכל האיברים הזוגיים*/
+    color: var(--color-8);
+    /*צבע בהיר לכל האיברים הזוגיים*/
 }
 
-    /* BLOCKQUOTE 1's AUDIO */
+/* BLOCKQUOTE 1's AUDIO (USED IN: INDEX) */
 .Blockquote-1 audio {
     margin-top: 1rem;
     border: 1px solid var(--color-7);
     border-radius: 50px;
-    width: calc(100% - 1rem);    /*רוחב רספונסיבי לפי האבא*/
+    width: 90%;
+    /*רוחב רספונסיבי לפי האבא*/
     height: 2.5rem;
 }
 
-    /* INDEX-PAGE VIOLENCE IMAGE (3rd ARTICLE)*/
-#Violence-Image-Article img {
-    outline: 2.5px solid var(--color-9);
-    border: 2.5px solid #8EBFE6;
-    border-radius: 3px;
+/* TABLE-1 CLASS (USED IN: INDEX)*/
+.Table-1 {
+    border-collapse: collapse;
+    /*לתקן את הגבולות המכוערות של ברירת מחדל*/
+    border: 2px solid var(--color-8);
+    /* גבולות עביים סביבות הטבלה */
+    width: 98%;
+    /*90% vs 98% = ?*/
+    /* width: 90% vs 98% = ? */
+    margin: 1rem auto;
+    /*ממרכז את האלמנט משמאל ומימין*/
     display: block;
-    width: calc(100% - 2.4rem); /*מאפשר לתמונה שלי לא לצוף מהקונטיינר ולהישאר באותו גודל גם על מסך קטן*/
-    max-width: 710px; /*מגביל את התמונה ל 710 פיקסלים למניעת התרחבות יתר*/
-    margin: 1rem auto 2rem;
+    overflow-x: auto;
+    /*מאפשר רספונציביות לטבלה*/
 }
 
-#Violence-Image-Article {
-    margin: 0 auto 1rem; /*ממרכז את האלמנט משמאל ומימין*/
-    max-width: 900px; /*מגביל את רוחב האלמנט ל-900 פיקסלים למניעת התרחבות יתר של הטקסט*/
-    text-align: center; /*ממרכז את תוכן האלמנט*/
-    background: url(violence-online.svg) center;
-    background-size: 4.1rem;
-    background-color: #f8f0e3a4;
-    background-blend-mode: overlay;
-    border: 1px var(--color-1) solid;
-    border-radius: 5px;
-    padding: 1rem 0.8rem;
-}
-
-#Violence-Image-Article > div 
-{
-    background-color: #ffffffbb;
-    padding: 0.4rem;
-    border: 1px var(--color-8) solid;
-
-    border-radius: 5px;
-}
-
-#Violence-Image-Article::before {
-    background: rgba(255, 0, 0, 0.5)
-}
-
-#Violence-Image-Article h2 {
-    color: var(--color-10);/* עיין הערה על הטג ״מארק״*/
-    text-decoration-color: #006D77; /*ולא גיליתי שזה רק צובע קו תחתון קיים בתג ״יו״ ולא מייצר קו חדש */
-}
-
-#Violence-Image-Article p {
-    margin: 0.6rem 0; /*מפריד את הקטעים ברווח ביניהם ובין הכותרת ובין הרשימה*/
-}
-
-#Violence-Image-Article p::before {
-content: "👉 " ;
-}
-
-#Violence-Image-Article ol {
-    width:fit-content;
-    margin:0 auto;
-}
-#Violence-Image-Article li {
-    list-style-position: inside;
-    color: var(--color-7);
-    font-weight: 200;
-    font-family: var(--font-4);
+.Table-1 caption {
     font-style: italic;
-    font-size: 1.15rem;
-    line-height: 1.4;
-    background-color: var(--color-9);
-    text-align: left;
-    list-style-type:lower-roman;
-    padding-left:1rem;
-    width: 92%;
-    margin: 0 auto;
+    font-family: var(--font-3);
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    border-top: 1px solid var(--color-8);
+    border-left: 1px solid var(--color-8);
+    border-right: 1px solid var(--color-8);
+    background-color: var(--color-6);
 }
 
+.Table-1 td {
+    border: 1px solid var(--color-8);
+    /* גבולות דקים בתוך התאים */
+    padding: 0.5rem;
+}
 
-#Violence-Image-Article mark {
-    background-color: var(--color-11);
-    width: fit-content;
-    margin: 0 auto;
-    padding:0 0.2rem;
+.Table-1 th {
+    color: var(--color-10);
+    border: 2px solid var(--color-8);
+    /* גבולות עביים בין הכותרות */
+    padding: 0.2rem 0;
+}
+
+.Table-1 tbody tr:nth-child(odd) {
+    background-color: var(--color-2);
+}
+
+.Table-1 tr td:first-child {
+    text-align: center;
     font-weight: bold;
-    color: inherit; /*כשניסיתי לצבוע את הכותרת גיליתי ש״מארק״ לא יורש צבע במחדל לכן אימצתי את הפטנט הנ״ל*/
 }
 
-
-    /** ALL PAGES' FOOTER **/
+/** ALL PAGES' FOOTER **/
 footer {
     background-color: var(--color-1);
     padding: 1rem;
     text-align: center;
-    outline: 1px solid var(--color-7);
-    /* border-bottom: 1px solid var(--color-7);  */
 }
 
 footer nav ul li {
@@ -315,6 +427,7 @@ footer nav ul li {
     display: inline-block;
     margin: 0 0.4rem;
     border-radius: 14px;
+    border: 1px solid var(--color-12);
 }
 
 footer nav ul li:hover {
@@ -325,10 +438,11 @@ footer nav ul li:hover {
 
 footer nav a {
     text-decoration: none;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.8rem;
     display: inline-block;
     color: var(--color-4);
     font-family: var(--font-6);
+    font-size: 0.8rem;
 }
 
 footer nav a:hover {
@@ -337,9 +451,151 @@ footer nav a:hover {
     transition: 0.5s;
 }
 
+/* ABOUT-PAGE SPECIFIC STYLES */
+#About-Section-1 {
+    margin: 0 auto 1rem;
+}
+
+#About-Section-1 p {
+    padding: 0.3rem 0 0.9rem;
+}
 
 
-    /* RESPONSIVITY */
+#About-Section-1 ul {
+    list-style-type: square; /* סוג תבליט ריבוע */
+    margin-right: 2rem; /* הזחה לימין */
+    padding-bottom: 1rem;
+}
+
+#About-Section-1 li {
+    line-height: 1.6;
+    color: var(--color-10);
+}
+
+
+/* TALI GAZIT SECTION */
+#Tali-Gazit-Section {
+    overflow: hidden; /* פטנט מצ׳אט: את הציפה של הטקע עם התמונה */
+}
+
+#Tali-Image-Wrapper {
+    float: right; /* תמונה צפה לימין */
+    margin-left: 1.5rem; /* ריווח משמאל לתמונה */
+    width: 30%; /* רוחב התמונה */
+    border: 1px solid var(--color-7);
+    padding: 1rem;
+    background-color: var(--color-2);
+    border-radius: 5px;
+    text-align: center; 
+}
+
+
+#Tali-Image-Wrapper img {
+    max-width: 100%; /* תמונה רספונסיבית */
+    height: auto;
+    display: block; /* מניעת רווח מיותר מתחת לתמונה */
+    margin: 0 auto 0.5rem; /* ריווח קל מלמטה */
+    border-bottom: 1px solid var(--color-7);
+}
+
+#Tali-Image-Wrapper dl {
+    margin: 0 auto; /* מרכוז רשימת ההגדרות */
+    width: fit-content; /* רוחב הרשימה מצומצם לתוכן */
+}
+
+
+#Tali-Gazit-Section p {
+    padding-bottom: 0.8rem; /* ריווח בין פסקאות */
+    text-align: justify; /* יישור טקסט לשני הצדדים */
+}
+
+
+/* CONTACT FORM CLASSES */
+
+.Contact-Form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-13);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.Contact-Form fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-8);
+    border-radius: 5px;
+    background-color: var(--color-14);
+}
+
+.Contact-Form legend.Form-Legend {
+    padding: 0 1rem;
+    color: var(--color-8);
+    font-weight: bold;
+    font-family: var(--font-3);
+}
+
+.Contact-Form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: var(--color-10);
+    font-weight: bold;
+}
+
+.Contact-Form input[type="text"],
+.Contact-Form input[type="email"],
+.Contact-Form select, /*בלקטורים מיוחדים לטפסים*/
+.Contact-Form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-8);
+    border-radius: 4px;
+    background-color: var(--color-15);
+    font-family: var(--font-2);
+    box-sizing: border-box; /*מנע בעייה שהטקסט היה צף*/
+}
+
+.Contact-Form input[type="radio"],
+.Contact-Form input[type="checkbox"] {
+    margin-left: 0.5rem;
+}
+
+.Contact-Form input[type="radio"]:hover,
+.Contact-Form input[type="checkbox"]:hover{
+    cursor: pointer; /*אפיינטי פויינטר של קליק מאשר המחדל (כך שיהיה יותר אינדיקטיבי)*/
+}
+
+.Choices-Labels:hover{ /*הלאבל ל הציקבוקס והרדיו ביחד בתוף קלאס*/
+    cursor: url('hand-pointer.svg'), pointer; /*קאסטום פויינטר (ללא זכויות יוצרים)*/
+}
+
+.Contact-Form input[type="radio"] + label,
+.Contact-Form input[type="checkbox"] + label { /*ה+ הוא לא ממני אלא פטנט מצ׳אט ג׳יפיטי*/
+    display: inline-block;
+    margin: 0 0 0 1rem;
+    font-weight: normal;
+}
+
+.Contact-Form button {
+    padding: 0.8rem 2rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-8);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Contact-Form button[type="reset"] {
+    background-color: var(--color-5);
+}
+.Contact-Form button:hover {
+    background-color: var(--color-10);
+}
+
+/* RESPONSIVITY */
 
 /* אימצתי פתרון רספונסיבי לצורך למידה אישית */
 
@@ -347,13 +603,11 @@ footer nav a:hover {
 
 /* רוב ככל הפתרון הוא ממני אך ביקשתי מצ׳אט לשפר כמה קטעים */
 
-
-
-@media (max-width: 375px) {
+@media (max-width: 380px) {
     header h1 {
-        margin: 0 auto;
-        position: static ;
-        padding: 0 !important;
+        margin: 0 auto 0.6rem;
+        position: static;
+        padding-left: 0 !important;
         font-size: 0.62rem;
         width: auto !important;
     }
@@ -363,28 +617,54 @@ footer nav a:hover {
     }
 
     header nav {
-        position:static;
-        /* Disabled the position:relative.*/
+        position: static;
+        padding: 1px
     }
 
-    footer nav li a {
-        font-size: 0.87rem !important;
+    header nav a,
+    footer nav a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.87rem;
     }
 
-    .Main-Section-1
-    {
-        padding:0.1rem !important;
+    footer nav a:hover,
+    header nav a:hover {
+        padding: 0.4rem 0.7rem;
     }
+
+    footer nav ul li,
+    header nav ul li {
+        margin: 0 0 0.3rem !important;
+    }
+
+    #Tali-Image-Wrapper {
+        width: 80%; 
+        margin: 1rem auto; 
+        padding: 0.4rem;
+
+    }
+    #Tali-Gazit-Section p {
+        text-align: right; 
+    }
+    #Tali-Gazit-Section p:last-of-type {
+        padding-top:1rem;
+        text-align: left;
+    }
+
 }
 
 @media (max-width: 640px) {
     header nav {
-        padding-top: 0.4rem !important;
-        top: 0.8rem !important;
+        top: 1rem !important;
     }
 
-    header nav li {
-        margin: 0 !important;
+    #Violence-Image-Section h2 {
+        font-size: 0.8rem
+    }
+
+    #Violence-Image-Section p,
+    #Violence-Image-Section ol li {
+        font-size: 0.7rem
     }
 
     header h1 {
@@ -394,7 +674,7 @@ footer nav a:hover {
         padding-left: 0.4rem;
     }
 
-    .Blockquote-1, .Section-1 p {
+    .Blockquote-1 {
         font-size: 0.94rem;
     }
 
@@ -405,26 +685,57 @@ footer nav a:hover {
     .Table-1 * {
         font-size: 0.8rem !important;
     }
+    #Tali-Image-Wrapper {
+         width: 50%; 
+    }
 
 }
 
 @media (max-width: 692px) {
 
-    .Blockquote-1 li, .Table-1 th, #Violence-Image-Article li {
+    .Blockquote-1 li,
+    .Table-1 th,
+    #Violence-Image-Section li {
         font-size: 1rem;
     }
 
-    h2, .Blockquote-1 h3 {
+    h2,
+    .Blockquote-1 h3 {
         font-size: 1.12rem;
     }
 
-    p, .Table-1 td {
-        font-size: 0.94rem ;
+    p,
+    .Table-1 td {
+        font-size: 0.94rem;
     }
 
-    #Online-Attack-Article h2::before {
+    #Online-Attack-Section h2::before {
         content: url(online-violence-small.svg) " ";
-    }    
+    }
+}
+
+@media (min-width: 420px) {
+    header nav {
+        right: 1rem
+    }
+}
+
+@media (min-width: 425px) {
+    header nav {
+        right: 1.5rem
+    }
+}
+
+@media (min-width: 435px) {
+    header nav {
+        right: 1.7rem
+    }
+}
+
+@media (min-width: 440px) {
+    header nav {
+        right: 1.7rem
+    }
 }
 
 @media (max-width: 726px) {
@@ -434,11 +745,21 @@ footer nav a:hover {
         padding-top: 0.4rem;
         padding-left: 0.8rem;
     }
-
-    header nav {
-        top: 0.5rem;
-    }
 }
 
+@media (min-width: 726px) {
+    header h1 {
+        height: 2rem;
+        font-size: 1.5rem;
+        padding-top: 0.4rem;
+        padding-left: 0.8rem;
+    }
 
+    header nav {
+        right: 3rem;
+    }
 
+    #Tali-Image-Wrapper {
+        width: 30%; 
+    }
+}
