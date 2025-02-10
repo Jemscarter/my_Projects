@@ -40,14 +40,16 @@ p>cite {
 }
 
 cite a {
-    color: inherit; /*משמש כחוק כללי שכל קישור בתוך סייט יוריש את הצבע (משתנה 8) והפונט וייט בולד שהוגדרו.*/
+    color: inherit;
+    /*משמש כחוק כללי שכל קישור בתוך סייט יוריש את הצבע (משתנה 8) והפונט וייט בולד שהוגדרו.*/
 }
 
 
 dt {
     font-weight: bold;
     color: var(--color-8);
-    margin-top: 0.5rem; /* ריווח בין הגדרות */
+    margin-top: 0.5rem;
+    /* ריווח בין הגדרות */
 }
 
 dd {
@@ -185,6 +187,7 @@ header nav a:hover {
 .Main-Article-1 section:first-of-type,
 .Main-Article-1 section:last-of-type {
     padding: 0 0.2rem;
+    /*תקף לכל שלושת הדפים שהמקטע האחרון והראשון יתפסו  רוחב של כמעט כל הדף*/
     margin: 0 auto;
 }
 
@@ -452,22 +455,24 @@ footer nav a:hover {
 }
 
 /* ABOUT-PAGE SPECIFIC STYLES */
-#About-Section-1 {
+.About-Sections {
     margin: 0 auto 1rem;
 }
 
-#About-Section-1 p {
+.About-Sections p {
     padding: 0.3rem 0 0.9rem;
 }
 
 
-#About-Section-1 ul {
-    list-style-type: square; /* סוג תבליט ריבוע */
-    margin-right: 2rem; /* הזחה לימין */
+.About-Sections ul {
+    list-style-type: square;
+    /* סוג תבליט ריבוע */
+    margin-right: 2rem;
+    /* הזחה לימין */
     padding-bottom: 1rem;
 }
 
-#About-Section-1 li {
+.About-Sections li {
     line-height: 1.6;
     color: var(--color-10);
 }
@@ -475,50 +480,57 @@ footer nav a:hover {
 
 /* TALI GAZIT SECTION */
 #Tali-Gazit-Section {
-    overflow: hidden; /* פטנט מצ׳אט: את הציפה של הטקע עם התמונה */
+    overflow: hidden;
+    /* פטנט מצ׳אט: את הציפה של הטקע עם התמונה */
 }
 
 #Tali-Image-Wrapper {
-    float: right; /* תמונה צפה לימין */
-    margin-left: 1.5rem; /* ריווח משמאל לתמונה */
-    width: 30%; /* רוחב התמונה */
+    float: right;
+    /* תמונה צפה לימין */
+    margin-left: 1.5rem;
+    /* ריווח משמאל לתמונה */
+    width: 30%;
+    /* רוחב התמונה */
     border: 1px solid var(--color-7);
     padding: 1rem;
     background-color: var(--color-2);
     border-radius: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
 
 #Tali-Image-Wrapper img {
-    max-width: 100%; /* תמונה רספונסיבית */
+    max-width: 100%;
+    /*שלא נוטפת מהקונטיינר תמונה רספונסיבית */
     height: auto;
-    display: block; /* מניעת רווח מיותר מתחת לתמונה */
-    margin: 0 auto 0.5rem; /* ריווח קל מלמטה */
+    margin: 0 auto 0.5rem;
+    /* ריווח קל מלמטה */
     border-bottom: 1px solid var(--color-7);
 }
 
-#Tali-Image-Wrapper dl {
-    margin: 0 auto; /* מרכוז רשימת ההגדרות */
-    width: fit-content; /* רוחב הרשימה מצומצם לתוכן */
-}
-
-
 #Tali-Gazit-Section p {
-    padding-bottom: 0.8rem; /* ריווח בין פסקאות */
-    text-align: justify; /* יישור טקסט לשני הצדדים */
+    padding-bottom: 0.8rem;
+    /* ריווח בין פסקאות */
+    text-align: justify;
+    /* יישור טקסט לשני הצדדים */
 }
 
+/* AMICHAI HAMBURGER SECTION */
+#Amichai-Hamburger-Section {
+    margin-bottom: 1rem;
+    /*לא הגדרתי את זה בתור מחדל לכן כאן שהוספתי קו הוספתי נמי מארג׳ין בוטום*/
+}
 
 /* CONTACT FORM CLASSES */
 
 .Contact-Form {
     max-width: 800px;
+    /*מגביל את הטופס כולו לרוחב 800*/
     margin: 2rem auto;
     padding: 2rem;
     background-color: var(--color-13);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Contact-Form fieldset {
@@ -545,7 +557,8 @@ footer nav a:hover {
 
 .Contact-Form input[type="text"],
 .Contact-Form input[type="email"],
-.Contact-Form select, /*בלקטורים מיוחדים לטפסים*/
+.Contact-Form select,
+/*בלקטורים מיוחדים לטפסים*/
 .Contact-Form textarea {
     width: 100%;
     padding: 0.8rem;
@@ -553,7 +566,8 @@ footer nav a:hover {
     border-radius: 4px;
     background-color: var(--color-15);
     font-family: var(--font-2);
-    box-sizing: border-box; /*מנע בעייה שהטקסט היה צף*/
+    box-sizing: border-box;
+    /*מנע בעייה שהטקסט היה צף*/
 }
 
 .Contact-Form input[type="radio"],
@@ -562,16 +576,20 @@ footer nav a:hover {
 }
 
 .Contact-Form input[type="radio"]:hover,
-.Contact-Form input[type="checkbox"]:hover{
-    cursor: pointer; /*אפיינטי פויינטר של קליק מאשר המחדל (כך שיהיה יותר אינדיקטיבי)*/
+.Contact-Form input[type="checkbox"]:hover {
+    cursor: pointer;
+    /*אפיינטי פויינטר של קליק מאשר המחדל (כך שיהיה יותר אינדיקטיבי)*/
 }
 
-.Choices-Labels:hover{ /*הלאבל ל הציקבוקס והרדיו ביחד בתוף קלאס*/
-    cursor: url('hand-pointer.svg'), pointer; /*קאסטום פויינטר (ללא זכויות יוצרים)*/
+.Choices-Labels:hover {
+    /*הלאבל ל הציקבוקס והרדיו ביחד בתוף קלאס*/
+    cursor: url('hand-pointer.svg'), pointer;
+    /*קאסטום פויינטר (ללא זכויות יוצרים)*/
 }
 
-.Contact-Form input[type="radio"] + label,
-.Contact-Form input[type="checkbox"] + label { /*ה+ הוא לא ממני אלא פטנט מצ׳אט ג׳יפיטי*/
+.Contact-Form input[type="radio"]+label,
+.Contact-Form input[type="checkbox"]+label {
+    /*ה+ הוא לא ממני אלא פטנט מצ׳אט ג׳יפיטי*/
     display: inline-block;
     margin: 0 0 0 1rem;
     font-weight: normal;
@@ -585,12 +603,13 @@ footer nav a:hover {
     background-color: var(--color-8);
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 .Contact-Form button[type="reset"] {
     background-color: var(--color-5);
 }
+
 .Contact-Form button:hover {
     background-color: var(--color-10);
 }
@@ -638,16 +657,18 @@ footer nav a:hover {
     }
 
     #Tali-Image-Wrapper {
-        width: 80%; 
-        margin: 1rem auto; 
+        width: 80%;
+        margin: 1rem auto;
         padding: 0.4rem;
 
     }
+
     #Tali-Gazit-Section p {
-        text-align: right; 
+        text-align: right;
     }
+
     #Tali-Gazit-Section p:last-of-type {
-        padding-top:1rem;
+        padding-top: 1rem;
         text-align: left;
     }
 
@@ -685,8 +706,9 @@ footer nav a:hover {
     .Table-1 * {
         font-size: 0.8rem !important;
     }
+
     #Tali-Image-Wrapper {
-         width: 50%; 
+        width: 50%;
     }
 
 }
@@ -760,6 +782,6 @@ footer nav a:hover {
     }
 
     #Tali-Image-Wrapper {
-        width: 30%; 
+        width: 30%;
     }
 }
